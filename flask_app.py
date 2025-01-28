@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 
-from chatbot import Chatbot
+from src.chatbot import Chatbot
 
 app = Flask(__name__)
 chatbot_instance = Chatbot() # create global chatbot instance

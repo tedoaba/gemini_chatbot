@@ -1,6 +1,6 @@
 import gradio as gr
 
-from chatbot import Chatbot
+from src.chatbot import Chatbot
 
 
 def chat(message, history):
