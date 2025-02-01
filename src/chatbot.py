@@ -1,4 +1,4 @@
-from api_client import GeminiAPIClient
+from src.api_client import GeminiAPIClient
 
 
 class Chatbot:

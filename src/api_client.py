@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-from utils import load_env_variable
+from src.utils import load_env_variable
 
 
 class GeminiAPIClient:

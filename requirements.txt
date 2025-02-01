@@ -2,3 +2,5 @@ gradio
 google-generativeai
 python-dotenv
 flask
+streamlit
+streamlit_chat
