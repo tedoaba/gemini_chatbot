@@ -1,5 +1,5 @@
 gradio
-google-generativeai
+google-generativeai==0.8.4
 python-dotenv
 flask
 streamlit
