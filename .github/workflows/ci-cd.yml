@@ -32,4 +32,3 @@ jobs:
         GEMINI_ID: ${{ secrets.GEMINI_ID }}
       run: |
         python -m unittest discover -s tests
-

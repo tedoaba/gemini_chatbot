@@ -1,10 +1,14 @@
-import google.generativeai as genai
+"""API client for interacting with the Gemini API."""
 
+import google.generativeai as genai
 from src.utils import load_env_variable
 
 
 class GeminiAPIClient:
+    """Client for interacting with the Gemini API."""
+
     def __init__(self):
+        """Initialize the GeminiAPIClient with API key and model name."""
         try:
             self.api_key = load_env_variable("GEMINI_API_KEY")
             self.model_name = load_env_variable("GEMINI_ID")
@@ -15,7 +19,7 @@ class GeminiAPIClient:
         self.model = genai.GenerativeModel(model_name=self.model_name)
 
     def generate_response(self, prompt):
-        """Generates a response from the Gemini API based on the prompt."""
+        """Generate a response from the Gemini API based on the prompt."""
         try:
             response = self.model.generate_content(prompt)
             if hasattr(response, "text"):

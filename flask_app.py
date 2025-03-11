@@ -1,20 +1,21 @@
-from flask import Flask, render_template, request, jsonify
+"""Flask application for Gemini Chatbot."""
 
+from flask import Flask, render_template, request, jsonify
 from src.chatbot import Chatbot
 
 app = Flask(__name__)
-chatbot_instance = Chatbot() 
+chatbot_instance = Chatbot()
 
 
 @app.route("/")
 def index():
-    """Renders the main chat interface."""
+    """Render the main chat interface."""
     return render_template("index.html")
 
 
 @app.route("/chat", methods=["POST"])
 def chat():
-    """Handles incoming chat messages and returns a chatbot response."""
+    """Handle incoming chat messages and return a chatbot response."""
     message = request.get_json().get("message")
     if not message:
         return jsonify({"error": "Message is required"}), 400
@@ -25,7 +26,7 @@ def chat():
 
 @app.route("/clear", methods=["POST"])
 def clear():
-    """Clears the chat history."""
+    """Clear the chat history."""
     chatbot_instance.clear_history()
     return jsonify({"message": "Chat history cleared"})
 
