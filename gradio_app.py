@@ -7,10 +7,9 @@ def chat(message, history):
     """Processes the chat message and returns the chatbot response."""
     chatbot = Chatbot()
 
-    if not history:  # If history is empty, create a new chatbot object
+    if not history:  
         chatbot.clear_history()
     else:
-        # Reconstruct chat history from Gradio format to chatbot
         for user_message, bot_message in history:
             chatbot.chat_history.append({"role": "user", "parts": [user_message]})
             chatbot.chat_history.append({"role": "model", "parts": [bot_message]})
