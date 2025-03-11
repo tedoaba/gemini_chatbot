@@ -1,6 +1,6 @@
-gradio
+gradio==5.16.0
 google-generativeai==0.8.4
 python-dotenv
-flask
-streamlit
-streamlit_chat
+Flask==3.1.0
+streamlit==1.42.0
+streamlit-chat==0.1.1
